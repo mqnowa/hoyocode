@@ -1,0 +1,23 @@
+{
+    "gi": {
+        "event": [["2024-06-05T07:00:00+09:00", "RTJUNRSHTAL9", "イベント調査中...(バージョンアップ恒例?)\n原石×60\n冒険家の経験×5"],
+                  [null, "GENSHINGIFT", "広告などで新規プレイヤー向けに配布\n原石×60\n冒険家の経験×5"],
+                  ["2024-04-24T07:00:00+09:00", "CA3BLTURGH9D", "イベント調査中...(バージョンアップ恒例?)\n原石×60\n冒険家の経験×5"]
+        ],
+        "streamer_reward": "モラ × 10000\n冒険家の経験 × 10\n仕上げ用良鉱 × 5\n魚肉の焼き麺 × 5\n椒椒鶏 × 5",
+        "streamer": [["ULEP5WZ36B27", "配信者調査中", null],
+                     ["XQECMR9IIJ46", "配信者調査中", null],
+                     ["PZFUH5GIP9UF", "配信者調査中", null],
+                     ["VFNS1OGXYOYU", "配信者調査中", null],
+                     ["MLEA572X2UHK", "配信者調査中", null],
+                     ["DSXY15NL247E", "配信者調査中", null],
+                     ["XEZAXRS88R5G", "配信者調査中", null],
+                     ["RERBFT39544D", "配信者調査中", null]]
+    },
+    "sr": {
+        "event": [[null, "STARRAILGIFT", "広告などで新規プレイヤー向けに配布\n原石×60\n冒険家の経験×5"]
+        ],
+        "streamer_reward": "",
+        "streamer": []
+    }
+}

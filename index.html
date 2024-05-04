@@ -16,28 +16,32 @@
 </head>
 
 <body>
-  <h1>Hoyo Code</h1>
   <div class="container text-center mb-3">
-    <div class="btn-group" role="group">
-      <input type="radio" class="btn-check" name="game-toggle" id="toggle-gi" autocomplete="off" checked>
+    <h1>Hoyo Code</h1>
+    新しいコードの情報提供はXアカウント 
+    <a href="https://x.com/mqnowa_gi">@mqnowa_gi</a>
+    までDMしてください。
+  </div>
+  <div class="container text-center mb-3">
+    <div class="btn-group" role="group" id="game-toggle">
+      <input type="radio" class="btn-check" name="game-toggle" id="toggle-gi" autocomplete="off" data-gameid="gi" checked>
       <label class="btn btn-outline-primary" for="toggle-gi">原神</label>
     
-      <input type="radio" class="btn-check" name="game-toggle" id="toggle-sr" autocomplete="off">
+      <input type="radio" class="btn-check" name="game-toggle" id="toggle-sr" autocomplete="off" data-gameid="sr">
       <label class="btn btn-outline-primary" for="toggle-sr">スターレイル</label>
     </div>
   </div>
   <div class="container text-center mb-3">
-    新しいコードの情報提供はXアカウント 
-    <a href="https://twitter.com/mqnowa_gi">@mqnowa_gi</a>
-    までDMしてください。
+    <h5>キャンペーンのコード</h5>
+    <div>キャンペーンもぜひ参加しましょう！</div>
   </div>
   <div class="container text-center mb-3">
     <div class="row" id="table">
-      <div id="template" class="col-xl-6 code-item border" hidden>
+      <div id="template" class="col-xl-4 col-md-6 col-sm-12 code-item border" hidden>
         <div class="container">
           <div class="input-group mt-3">
             <input type="text" class="form-control code-textbox" disabled>
-            <button type="button" class="btn btn-primary code-copy-button">
+            <button type="button" class="btn btn-secondary code-copy-button">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-fill" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M10 1.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1Zm-5 0A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5v-1Zm-2 0h1v1A2.5 2.5 0 0 0 6.5 5h3A2.5 2.5 0 0 0 12 2.5v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2Z"/>
               </svg>
@@ -47,22 +51,54 @@
             </button>
           </div>
           <div class="container mt-3 code-description">
+            サンプルテキスト
           </div>
-          <div class="container mt-3 code-expire">
+          <div class="container mt-3">
+            有効期限
+          </div>
+          <div class="container code-expire">
             10d 12:34:56
           </div>
-          <div class="btn-group mt-3 mb-3">
-            <div class="row">
-              <button type="button" class="btn btn-primary enterd-link">入力済みサイトへ移動</button>
-            </div>
+          <div class="row">
+            <a class="btn btn-primary enterd-link mt-3" href="" target="_blank">入力済みサイトへ移動</a>
+          </div>
+          <div class="row">
+            <a class="btn btn-success media-link mt-3 mb-3" href="" target="_blank">動画を視聴</a>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="container text-center mb-3">
+    <h5>配信者のコード</h5>
+    <div class="mb-2">動画を視聴してコミュニティを盛り上げましょう！</div>
+    <div id="streamer_reward"></div>
+  </div>
+  <div class="container text-center mb-3" id="streamer-table">
+    <div class="row" id="streamer-template" hidden>
+      <div class="col-lg-8 col-md-12 d-flex mb-lg-3 mb-2">
+        <div class="flex-fill mt-2 code-description">配信者名</div>
+        <div class="btn-group">
+          <input type="text" class="form-control code-textbox" disabled>
+          <button type="button" class="btn btn-secondary code-copy-button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M10 1.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1Zm-5 0A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5v1A1.5 1.5 0 0 1 9.5 4h-3A1.5 1.5 0 0 1 5 2.5v-1Zm-2 0h1v1A2.5 2.5 0 0 0 6.5 5h3A2.5 2.5 0 0 0 12 2.5v-1h1a2 2 0 0 1 2 2V14a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V3.5a2 2 0 0 1 2-2Z"/>
+            </svg>
+            <svg hidden xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+              <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425a.247.247 0 0 1 .02-.022Z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12 d-flex mb-3 justify-content-end">
+        <a class="btn btn-primary enterd-link" href="" target="_blank">入力済みサイトへ移動</a>
+        <a class="btn btn-success media-link ms-3" href="" target="_blank">動画を視聴</a>
+      </div>
+    </div>
+  </div>
+  <div class="container text-center mb-3">
     新しいコードの情報提供はXアカウント 
-    <a href="https://twitter.com/mqnowa_gi">@mqnowa_gi</a>
+    <a href="https://x.com/mqnowa_gi">@mqnowa_gi</a>
     までDMしてください。
   </div>
 </body>
